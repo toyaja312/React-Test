@@ -1,0 +1,231 @@
+/* UserForm.module.css */
+.outer_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  background-color: #080710;
+}
+
+.shape_1,
+.shape_2 {
+  position: absolute;
+}
+
+.shape_1 {
+  left: 50%;
+  bottom: 0;
+  width: 20rem;
+  aspect-ratio: 1/1;
+  border-radius: var(--rd-full);
+
+  background: linear-gradient(to right, #ff512f, #f09819);
+}
+.shape_2 {
+  left: 30%;
+  top: 0;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+  background: linear-gradient(to right, rgb(165, 165, 210), purple);
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 50rem;
+  padding: 2rem;
+  color: white;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.page {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nameGroup {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .nameGroup {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.label {
+  font-weight: 500;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.input,
+.select,
+.textarea {
+  color: white;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+.input::placeholder,
+.select::placeholder,
+.textarea::placeholder {
+  color: white;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.input::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Inverts the default black icon to white */
+  cursor: pointer;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.radioOption input {
+  margin: 0;
+}
+
+.select {
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.select option {
+  background-color: rgb(63, 60, 60);
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+}
+
+.checkboxGroup input {
+  width: 18px;
+  height: 18px;
+}
+
+.submitButton {
+  flex: 1;
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.disabled_btn {
+  cursor: not-allowed;
+  background-color: gray;
+}
+
+.err_msg {
+  visibility: hidden;
+  color: #ff512f;
+}
+
+.show_err_msg {
+  visibility: visible;
+}
+
+.modal {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.53);
+}
+
+.modal div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3rem;
+  max-width: 30rem;
+  border-radius: 2rem;
+  background: linear-gradient(to left, red, orange);
+}
+
+.modal p {
+  font-size: 2rem;
+  color: white;
+}
+
+.modal span {
+  cursor: pointer;
+  font-size: 3rem;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}

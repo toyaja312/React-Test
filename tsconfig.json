@@ -1,5 +1,11 @@
 {
-  "files": [],
+  "compilerOptions": {
+    "module": "ESNext", // or "NodeNext"
+    "target": "ES2023",
+    "moduleResolution": "Node",
+    "types": ["cypress"]
+  },
+  "include": ["src", "cypress/**/*.ts"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
