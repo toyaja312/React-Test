@@ -1,6 +1,6 @@
 # 🧾 User Registration Form with Cypress Tests
 
-This project is a **User Registration Form** built using React (or your framework of choice), designed to collect user details like name, mobile number, password, address, and more.
+This project is a **User Registration Form** built using React , designed to collect user details like name, mobile number, password, address, and more.
 
 Cypress is used to test the form's functionality — ensuring everything from input validation to form submission works correctly.
 
