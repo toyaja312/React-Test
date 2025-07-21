@@ -3,7 +3,12 @@
     "module": "ESNext", // or "NodeNext"
     "target": "ES2023",
     "moduleResolution": "Node",
-    "types": ["cypress"]
+    "types": ["cypress"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true
   },
   "include": ["src", "cypress/**/*.ts"],
   "references": [
