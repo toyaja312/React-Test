@@ -99,7 +99,7 @@ npx cypress run --spec "cypress/e2e/demoTest/features/pageStructure/index.cy.ts"
 
 For a visual walkthrough of the project setup and Cypress testing workflow, watch our comprehensive guide:
 
-**[📺 Project Setup & Testing Guide](https://www.loom.com/share/b5a17884a3a643b294aeb673f450ab19?sid=380af376-bc40-4f4d-a016-9c2f1105b26a)**
+**[📺 Project Setup & Testing Guide](https://www.loom.com/share/989aab426aa94289be3b6d3097b3cccf?sid=0a77d56e-5120-41d6-99ef-f010590132df)**
 
 This video covers:
 
