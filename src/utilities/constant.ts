@@ -1,4 +1,5 @@
 export const indianStates: string[] = [
+  "",
   "Andhra Pradesh",
   "Arunachal Pradesh",
   "Assam",

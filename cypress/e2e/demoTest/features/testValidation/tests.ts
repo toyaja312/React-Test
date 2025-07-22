@@ -5,7 +5,8 @@ export const validationTests = () => {
   validatePageThree();
 };
 
-// Tests
+//Write your test cases in the following functions
+// Each function should contain test cases for a specific page's validation
 export const validatePageOne = () => {
   it("should validate structure of page 1", () => {});
 };

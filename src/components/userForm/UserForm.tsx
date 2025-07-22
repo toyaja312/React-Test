@@ -3,7 +3,6 @@ import React, { useState, type ChangeEvent } from "react";
 import styles from "./index.module.css";
 import PageOne from "./chunks/pageOne";
 import PageTwo from "./chunks/pageTwo";
-import PageThree from "./chunks/pageThree";
 
 // Type definitions
 interface IField {
@@ -19,11 +18,7 @@ export interface IFormData {
   confirmPassword: IField;
   address: IField;
   gender: IField;
-  country: IField;
-  occupation: IField;
-  birthDate: IField;
-  education: IField;
-  pinCode: IField;
+  state: IField;
 }
 
 type InputType =
@@ -35,7 +30,7 @@ type InputType =
   | "confirmPassword"
   | "pinCode";
 
-const pages = [PageOne, PageTwo, PageThree];
+const pages = [PageOne, PageTwo];
 const initialFormData = {
   firstName: {
     value: "",
@@ -62,18 +57,9 @@ const initialFormData = {
     error: false,
     errorMsg: "Password Does not match",
   },
-  pinCode: { value: "", error: false, errorMsg: "Enter a valid pin code" },
   address: { value: "", error: false, errorMsg: "Must me 5 character long" },
   gender: { value: "", error: false, errorMsg: "" },
-  country: { value: "", error: false, errorMsg: "" },
   state: { value: "", error: false, errorMsg: "" },
-  occupation: { value: "", error: false, errorMsg: "" },
-  birthDate: {
-    value: "",
-    error: false,
-    errorMsg: "Not valid format: DD/MM/YYYY",
-  },
-  education: { value: "", error: false, errorMsg: "" },
 };
 
 const UserForm: React.FC = () => {
@@ -131,6 +117,9 @@ const UserForm: React.FC = () => {
       const res = Object.values(formData).every((data) => {
         return data.value;
       });
+      console.log("Form Data:", formData);
+      console.log("Validation Result:", res);
+
       if (!res) {
         setModalText("Please Fill all fields");
         return;
@@ -148,10 +137,6 @@ const UserForm: React.FC = () => {
 
   return (
     <div className={styles.outer_container}>
-      {/* --------Shapes --------- */}
-      <div className={styles.shape_1}></div>
-      <div className={styles.shape_2}></div>
-
       {/* ------Modal -------- */}
       {modalText && (
         <div className={styles.modal}>

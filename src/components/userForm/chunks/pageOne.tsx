@@ -1,6 +1,7 @@
 import type { ChangeEvent } from "react";
 import styles from "../index.module.css";
 import type { IFormData } from "../UserForm";
+import { indianStates } from "../../../utilities/constant";
 interface IPageOneProps {
   formData: IFormData;
   handleChange: (
@@ -141,64 +142,23 @@ const PageOne = (props: IPageOneProps) => {
           {formData.confirmPassword.errorMsg}
         </p>
       </div>
-
       <div className={styles.formGroup}>
-        <label htmlFor="birthDate" className={styles.label}>
-          Date of Birth
+        <label htmlFor="state" className={styles.label}>
+          Select State
         </label>
-        <input
-          type="date"
-          id="birthDate"
-          name="birthDate"
-          value={formData.birthDate.value}
+        <select
+          id="state"
+          name="state"
+          value={formData.state.value}
           onChange={handleChange}
-          className={styles.input}
-        />
-        <p
-          className={`${styles.err_msg} ${
-            !formData.birthDate.error &&
-            formData.birthDate.value &&
-            styles.show_err_msg
-          }`}
+          className={styles.select}
         >
-          {formData.birthDate.errorMsg}
-        </p>
-      </div>
-
-      <div className={styles.formGroup}>
-        <label className={styles.label}>Gender</label>
-        <div className={styles.radioGroup}>
-          <label className={styles.radioOption}>
-            <input
-              type="radio"
-              name="gender"
-              value="male"
-              checked={formData.gender.value === "male"}
-              onChange={handleChange}
-            />
-            <span>Male</span>
-          </label>
-          <label className={styles.radioOption}>
-            <input
-              type="radio"
-              name="gender"
-              value="female"
-              checked={formData.gender.value === "female"}
-              onChange={handleChange}
-            />
-            <span>Female</span>
-          </label>
-          <label className={styles.radioOption}>
-            <input
-              type="radio"
-              name="gender"
-              value="other"
-              checked={formData.gender.value === "other"}
-              onChange={handleChange}
-            />
-            <span>Other</span>
-          </label>
-        </div>
+          {indianStates.map((state, i) => (
+            <option key={i} value={state.toLowerCase()}>
+              {state}
+            </option>
+          ))}
+        </select>
       </div>
     </>
   );
