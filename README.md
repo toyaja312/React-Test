@@ -22,10 +22,10 @@ Welcome! This guide will help you set up the project, understand the codebase, w
 
 ### 1. Fork and Clone the Repository
 
-1. **Fork this repository** to your GitHub account
-2. **Clone your fork** locally:
+1. **Fork this repository** to your GitHub account by clicking the "Fork" button at the top right of this page
+2. **Clone your forked repository** locally:
    ```bash
-   git clone https://github.com/growmeorganic/React-Test.git
+   git clone https://github.com/YOUR_USERNAME/React-Test.git
    cd React-Test
    ```
 
@@ -99,7 +99,7 @@ npx cypress run --spec "cypress/e2e/demoTest/features/pageStructure/index.cy.ts"
 
 For a visual walkthrough of the project setup and Cypress testing workflow, watch our comprehensive guide:
 
-**[📺 Project Setup & Testing Guide](./assets/Guide.mov)**
+**[📺 Project Setup & Testing Guide](https://www.loom.com/share/b5a17884a3a643b294aeb673f450ab19?sid=380af376-bc40-4f4d-a016-9c2f1105b26a)**
 
 This video covers:
 
@@ -162,67 +162,12 @@ cy.should("have.value", "expected");
 
 ---
 
-## 🔄 Contributing with Pull Requests
+### Step 5: Share Your Work
 
-### Step 1: Create a Feature Branch
+Once you make changes your forked project:
 
-```bash
-# Create and switch to a new branch
-git checkout -b feature/your-feature-name
-
-# Example:
-git checkout -b feature/add-email-validation-tests
-```
-
-### Step 2: Make Your Changes
-
-1. Write your tests in the appropriate directory
-2. Ensure all tests pass:
-   ```bash
-   npm run dev  # Keep server running
-   npx cypress run  # Run all tests
-   ```
-3. Test your specific changes:
-   ```bash
-   npx cypress run --spec "path/to/your/test.cy.ts"
-   ```
-
-### Step 3: Commit Your Changes
-
-```bash
-# Stage your changes
-git add .
-
-# Commit with a descriptive message
-git commit -m "feat: add email validation tests for user form"
-
-# Push to your fork
-git push origin feature/your-feature-name
-```
-
-### Step 4: Create a Pull Request
-
-1. Go to your forked repository on GitHub
-2. Click "New Pull Request"
-3. Select your feature branch
-4. Fill out the PR template:
-
-**PR Title Format**: `feat: add email validation tests`
-
-**PR Description Template**:
-
-```markdown
-## What this PR does
-
-- Adds email validation tests for the user registration form
-- Covers both valid and invalid email scenarios
-
-## Testing
-
-- [x] All existing tests pass
-- [x] New tests pass locally
-- [x] Tested with `npx cypress run`
-```
+2. **Share the link** to your forked repository with the project maintainers
+3. **Ensure all tests pass** and your code follows the established patterns
 
 ---
 
@@ -261,13 +206,14 @@ git push origin feature/your-feature-name
 2. **Create** new test suites for different form features in `testValidation/`
 3. **Follow** the established patterns and naming conventions
 4. **Ensure** all tests are well-documented and pass
-5. **Submit** a clean pull request
+5. **Submit** your work by sharing your forked repository
 
 ### Success Criteria
 
 - ✅ Tests follow existing patterns
 - ✅ All tests pass in both interactive and headless modes
 - ✅ Code is well-commented and readable
-- ✅ PR includes proper description and testing notes
+- ✅ Fork contains proper commit history and PR documentation
+- ✅ Repository link shared with maintainers for review
 
 **Good luck! 🚀**
