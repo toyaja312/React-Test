@@ -1,3 +1,4 @@
+import { localHostUrl } from "../../../../support/constants";
 // all tests caller function
 export const validationTests = () => {
   validatePageOne();
@@ -9,6 +10,8 @@ export const validationTests = () => {
 // Each function should contain test cases for a specific page's validation
 export const validatePageOne = () => {
   it("should show error if firstName and lastName have less than 3 characters", () => {
+
+    cy.visit(localHostUrl);
 
     //Enter less than 3 characters in firstname and lastname 
     cy.get('#firstName').clear().type('Al');
